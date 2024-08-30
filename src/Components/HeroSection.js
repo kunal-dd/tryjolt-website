@@ -12,7 +12,7 @@ const JoinWaitlistPopup = ({ onClose }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const response = await fetch(
+    await fetch(
       "https://script.google.com/macros/s/AKfycbyZlRo5P_JUH8MjXTJzxvIemQgCeCKvd8g_IvdICvHjuxbWoPTmSzTToKSDbqNXEHA0kw/exec",
       {
         method: "POST",
@@ -24,13 +24,7 @@ const JoinWaitlistPopup = ({ onClose }) => {
       }
     );
 
-    const result = await response.json();
-    if (result.status === "success") {
-      setMessage("You've successfully joined the waitlist!");
-    } else {
-      setMessage("There was an error. Please try again.");
-    }
-
+    setMessage("You've successfully joined the waitlist!");
     setIsSubmitting(false);
     setEmail("");
   };
