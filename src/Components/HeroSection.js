@@ -84,9 +84,9 @@ const HeroAndDashboard = () => {
         <div className="container mx-auto px-4 flex items-center">
           <div className="w-1/2 pr-8">
             <h1 className="text-[55px] font-bold mb-4 text-left">
-              <span className="text-[#FFF5C1]">Engage More, Acquire Fast,</span>
+              <span className="text-[#FFF5C1]">Amplify Engagement, Accelerate Acquisition,</span>
               <br />
-              <span>Retain Strong, Grow Big.</span>
+              <span>Retain Smarter, Grow Bigger.</span>
             </h1>
             <p className="text-xl mb-8 text-left">
               With Tryjolt, SaaS teams engage, acquire, retain, and grow—all in
