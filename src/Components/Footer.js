@@ -32,7 +32,7 @@ const Footer = () => {
                   <h3 className="font-bold mb-2 md:mb-4 text-base">
                     CONTACT US
                   </h3>
-                  <p className="text-sm md:text-base">team@tryjolt.com</p>
+                  <p className="text-sm md:text-base">team@tryjolt.io</p>
                 </div>
 
                 <hr className="border-t border-[#5F1639] -mx-4 md:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)]" />
