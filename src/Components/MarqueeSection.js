@@ -84,8 +84,7 @@ const MarqueeSection = () => {
           Integrations
         </h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-2xl mx-auto">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text
+          Tryjolt seamlessly integrates with various platforms to ensure all customer data is synced across platforms.
         </p>
       </div>
 
