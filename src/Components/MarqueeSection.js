@@ -80,7 +80,7 @@ const MarqueeSection = () => {
   return (
     <section className="py-20 md:py-40 bg-white font-outfit">
       <div className="container mx-auto px-4 mb-12">
-        <h2 className="text-2xl md:text-4xl text-center mb-6 text-[#2C155D] font-medium">
+        <h2 className="text-2xl md:text-5xl text-center mb-6 text-[#2C155D] font-medium">
           Integrations
         </h2>
         <p className="text-sm md:text-base mb-6 text-center max-w-2xl mx-auto">
