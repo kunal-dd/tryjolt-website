@@ -1,6 +1,7 @@
 import React from "react";
 import JoltStudio from "../Assets/Images/Joltstudio.png";
 import StudioSectionBG from "../Assets/Images/StudioSectionBG.png";
+import { ButtonArrow } from "../Assets/Icons";
 
 const JoltStudioSection = () => {
   return (
@@ -40,8 +41,11 @@ const JoltStudioSection = () => {
                 onboarding, product updates, or re-engagement, enhancing
                 customer retention through a personalized approach.
               </p>
-              <button className="bg-white text-[#0C424A] font-bold py-2 px-5 rounded-full hover:bg-opacity-90 transition duration-300">
-                Schedule a Demo
+              <button className="bg-white text-[#4710BC] font-medium py-1 pl-4 sm:pl-6 pr-1 rounded-full flex items-center text-sm sm:text-base">
+                <span className="mr-2">Let's Get Started</span>
+                <div className="bg-[#4710BC] rounded-full p-1">
+                  <ButtonArrow />
+                </div>
               </button>
             </div>
           </div>
