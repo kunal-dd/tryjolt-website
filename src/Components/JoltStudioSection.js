@@ -5,7 +5,7 @@ import { ButtonArrow } from "../Assets/Icons";
 
 const JoltStudioSection = () => {
   return (
-    <section className="bg-[#0C424A] text-white font-outfit overflow-visible relative">
+    <section className="bg-[#0B353B] text-white font-outfit overflow-visible relative">
       <div className="container mx-auto px-20 relative">
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-1/2 relative pb-[100px]">
