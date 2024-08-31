@@ -131,7 +131,7 @@ const HeroAndDashboard = () => {
 
       {/* Dashboard Image */}
       <div
-        className="absolute left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[1500px] mx-auto"
+        className="absolute left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[1280px] mx-auto"
         style={{ marginTop: "-50px", zIndex: 9999 }}
       >
         <div
