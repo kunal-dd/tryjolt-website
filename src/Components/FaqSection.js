@@ -4,7 +4,7 @@ const FAQItem = memo(({ question, answer, isOpen, onToggle }) => {
   return (
     <div className="border-b border-[#E1E6F2] py-4">
       <button className="flex items-center w-full text-left" onClick={onToggle}>
-        <span className="text-xl md:text-2xl mr-4 w-8 h-8 flex items-center justify-center border  border-[#4710BC] text-[#4710BC] rounded-full">
+        <span className="text-xl md:text-2xl mr-4 w-6 h-6 flex items-center justify-center border  border-[#4710BC] text-[#4710BC] rounded-full">
           {isOpen ? "−" : "+"}
         </span>
         <span className="text-xl md:text-2xl font-medium text-[#2C155D]">
