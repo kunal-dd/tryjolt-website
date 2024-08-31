@@ -8,7 +8,7 @@ const JoltStudioSection = () => {
       <div className="container mx-auto px-20 relative">
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-1/2 relative pb-[100px]">
-            <div className="absolute left-[-50px] w-[calc(100%+50px)] top-11 bottom-[100px]">
+            <div className="absolute left-[-50px] w-[calc(100%+50px)] top-[11px] bottom-[100px]">
               <img
                 src={JoltStudio}
                 alt="Jolt Studio"
