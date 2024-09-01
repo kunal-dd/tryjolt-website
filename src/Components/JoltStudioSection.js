@@ -34,14 +34,9 @@ const JoltStudioSection = () => {
               {" "}
               <h2 className="text-3xl font-bold mb-4 text-left text-[#E4FFCE]">Jolt Studio</h2>
               <p className="text-base mb-6 text-left">
-                Jolt studio allows businesses to create tailored video messages
-                for their customers. With this feature, you can produce
-                professional-quality videos that are personalized for each
-                customer segment or individual. These videos can be used for
-                onboarding, product updates, or re-engagement, enhancing
-                customer retention through a personalized approach.
+                Jolt studio allows businesses to create tailored video messages for their customers. With this feature, you can produce professional-quality videos that are personalized for each customer segment or individual. These videos can be used for onboarding, product updates, or re-engagement, enhancing customer retention through a personalized approach.
               </p>
-              <button className="bg-white text-[#4710BC] font-medium py-1 pl-4 sm:pl-6 pr-1 rounded-full flex items-center text-sm sm:text-base">
+              <button onClick={() => window.open("https://cal.com/tryjolt/team", "_blank")} className="bg-white text-[#4710BC] font-medium py-1 pl-4 sm:pl-6 pr-1 rounded-full flex items-center text-sm sm:text-base">
                 <span className="mr-2">Let's Get Started</span>
                 <div className="bg-[#4710BC] rounded-full p-1">
                   <ButtonArrow />

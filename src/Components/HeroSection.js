@@ -29,10 +29,23 @@ const JoinWaitlistPopup = ({ onClose }) => {
     setEmail("");
   };
 
+
+  // <div data-dialog-backdrop="animated-dialog" data-dialog-backdrop-close="true"
+  //      class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+  //   <div data-dialog="animated-dialog" data-dialog-mount="opacity-100 translate-y-0 scale-100"
+  //        data-dialog-unmount="opacity-0 -translate-y-28 scale-90 pointer-events-none"
+  //        data-dialog-transition="transition-all duration-300"
+  //        class="relative m-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-white font-sans text-base font-light leading-relaxed text-blue-gray-500 antialiased shadow-2xl">
+  //
+  //   </div>
+  //
+  // </div>
+
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg shadow-lg p-8 w-96 relative">
-        <h2 className="text-xl font-bold mb-4">Join the Waitlist</h2>
+    <div style={{ zIndex: 999999 }}
+         className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-sm transition-opacity duration-500">
+      <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 w-full max-w-sm sm:w-96 relative mx-4">
+        <h2 className="text-lg sm:text-xl font-bold mb-4">Join the Waitlist</h2>
         <p className="mb-4">Enter your details to join the waitlist.</p>
         <form onSubmit={handleSubmit}>
           <input
@@ -54,7 +67,7 @@ const JoinWaitlistPopup = ({ onClose }) => {
         {message && <p className="mt-4 text-green-600">{message}</p>}
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+          className="absolute top-1 right-3 text-2xl text-gray-600 hover:text-gray-800"
         >
           &times;
         </button>
@@ -77,78 +90,65 @@ const HeroAndDashboard = () => {
   return (
     <div className="font-outfit relative">
       {/* Hero Section */}
-      <div
-        className="bg-[#27201D] text-white py-20 relative z-10"
-        style={{ height: "850px" }}
-      >
-        <div className="container mx-auto px-4 flex items-center">
-          <div className="w-1/2 pr-8">
-            <h1 className="text-[55px] font-bold mb-4 text-left">
-              <span className="text-[#FFF5C1]">Amplify Engagement, Accelerate Acquisition,</span>
+      <div className="bg-[#27201D] text-white py-10 md:py-16 sm:py-20 relative z-10">
+        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
+          <div className="lg:w-1/2 pr-0 lg:pr-8 text-center lg:text-left">
+            <h1 className="text-3xl min-[320px]:text-4xl lg:text-[55px] font-bold mb-4 lg:leading-normal min-[320px]:leading-normal">
+              <span className="text-[#FFF5C1]">Revolutionize Customer</span>
               <br />
-              <span>Retain Smarter, Grow Bigger.</span>
+              <span>Retention & Acquisition</span>
             </h1>
-            <p className="text-xl mb-8 text-left">
-              With Tryjolt, SaaS teams engage, acquire, retain, and grow—all in
-              one powerful platform designed for high-impact results.
+            <p className="text-lg min-[320px]:text-xl mb-8">
+              Track and monitor all your customer from one dashboard
             </p>
-            <div className="space-x-4 flex">
-              <button className="bg-white text-[#4710BC] font-medium py-1 pl-4 pr-1 rounded-full flex items-center">
-                <span className="mr-3">Talk to us</span>
+            <div className="pt:20 pb-20 min-[320px]:pb-16 lg:space-y-0 lg:space-x-4 min-[320px]:space-x-4 flex flex-col lg:flex-row min-[320px]:flex-row justify-center lg:justify-start">
+              <button onClick={() => window.open("https://cal.com/tryjolt/team", "_blank")}
+                  className="bg-white text-[#4710BC] font-medium py-2 px-4 rounded-full flex items-center">
+                <span className="mr-2">Schedule a Demo</span>
                 <div className="bg-[#4710BC] rounded-full p-1">
                   <ButtonArrow />
                 </div>
               </button>
               <button
                 onClick={openPopup}
-                className="bg-transparent hover:bg-white hover:text-[#27201D] text-white font-medium py-1 pl-4 pr-1 rounded-full border-2 border-white flex items-center"
+                className="bg-transparent hover:bg-white hover:text-[#27201D] text-white font-medium py-2 px-4 rounded-full border-2 border-white flex items-center"
               >
-                <span className="mr-3">Join Waitlist</span>
+                <span className="mr-2">Join Waitlist</span>
                 <div className="bg-white rounded-full p-1">
                   <BlueButtonArrow />
                 </div>
               </button>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2 flex lg:mb-20">
             <img
               src={herosectionimage}
               alt="Hero section"
-              className="relative z-10"
+              className="w-full flex h-auto mx-auto"
             />
           </div>
         </div>
       </div>
 
-      {/* Dashboard Section */}
-      <div className="py-40 bg-white relative">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="w-full h-64"></div>
-          </div>
-        </div>
-      </div>
-
       {/* Dashboard Image */}
-      <div
-        className="absolute left-1/2 top-3/4 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[1280px] mx-auto"
-        style={{ marginTop: "-50px", zIndex: 9999 }}
-      >
-        <div
-          className="absolute inset-0 rounded-[20px] p-6"
-          style={{
-            background: "rgba(255, 255, 255, 0.13)",
-            backdropFilter: "blur(4.5px)",
-            WebkitBackdropFilter: "blur(4.5px)",
-            zIndex: -1,
-          }}
-        ></div>
-        <div className="p-6">
-          <img
-            src={DashboardImage}
-            alt="Dashboard Screenshot"
-            className="w-full h-auto rounded-lg shadow-lg relative z-10"
-          />
+      <div className="container mx-auto lg:mb-[550px] xl:mb-[650px] px-4 relative z-[99999]">
+        <div className="lg:absolute top xl:-top-36 w-full max-w-[1410px] mx-auto px-4">
+          <div
+              className="absolute inset-0 rounded-[20px] p-6"
+              style={{
+                background: "rgba(255, 255, 255, 0.13)",
+                backdropFilter: "blur(4.5px)",
+                WebkitBackdropFilter: "blur(4.5px)",
+                zIndex: -1,
+              }}
+          ></div>
+          <div className="p-6">
+            <img
+                src={DashboardImage}
+                alt="Dashboard Screenshot"
+                className="w-full h-auto rounded-lg shadow-lg relative z-10"
+            />
+          </div>
         </div>
       </div>
 
